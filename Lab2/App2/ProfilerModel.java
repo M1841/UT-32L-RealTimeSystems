@@ -2,6 +2,7 @@ package Lab2.App2;
 
 import java.util.Observable;
 
+@SuppressWarnings("deprecation")
 public class ProfilerModel extends Observable implements Runnable {
   public void run() {
     for (int c = 0; c < 1000; c++) {

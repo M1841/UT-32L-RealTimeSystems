@@ -7,6 +7,7 @@ import java.util.Observer;
 import javax.swing.JFrame;
 import javax.swing.JProgressBar;
 
+@SuppressWarnings("deprecation")
 public class ProfilerView extends JFrame implements Observer {
   public void update(Observable observable, Object arg) {
     ProfilerModel model = (ProfilerModel) observable;
