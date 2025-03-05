@@ -16,10 +16,6 @@ public class ProfilerView extends JFrame implements Observer {
     bars.get(id).setValue(progress);
   }
 
-  public void setProgressValue(int barId, int value) {
-    bars.get(barId).setValue(value);
-  }
-
   public ProfilerView(int threadCount) {
     setLayout(null);
     setSize(530, 330);
