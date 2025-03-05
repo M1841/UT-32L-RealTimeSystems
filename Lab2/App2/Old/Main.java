@@ -7,7 +7,7 @@ public class Main {
   public static void main(String args[]) {
     Window win = new Window(noOfThreads);
     for (int i = 0; i < noOfThreads; i++) {
-      new Task(i, i + 2, win, processorLoad).start();
+      new Fir(i, i + 2, win, processorLoad).start();
     }
   }
 }

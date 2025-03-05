@@ -1,32 +1,31 @@
 package Lab2.App2.Old;
 
 import java.util.ArrayList;
-
 import javax.swing.JFrame;
 import javax.swing.JProgressBar;
 
 public class Window extends JFrame {
-  public void setProgressValue(int barId, int value) {
-    bars.get(barId).setValue(value);
-  }
+  ArrayList<JProgressBar> bars = new ArrayList<JProgressBar>();
 
-  public Window(int threadCount) {
+  public Window(int nrThreads) {
     setLayout(null);
     setSize(450, 400);
     setDefaultCloseOperation(EXIT_ON_CLOSE);
-    init(threadCount);
+    init(nrThreads);
     this.setVisible(true);
   }
 
   private void init(int n) {
     for (int i = 0; i < n; i++) {
-      JProgressBar progressBar = new JProgressBar();
-      progressBar.setMaximum(1000);
-      progressBar.setBounds(50, (i + 1) * 30, 350, 20);
-      this.add(progressBar);
-      this.bars.add(progressBar);
+      JProgressBar pb = new JProgressBar();
+      pb.setMaximum(1000);
+      pb.setBounds(50, (i + 1) * 30, 350, 20);
+      this.add(pb);
+      this.bars.add(pb);
     }
   }
 
-  private ArrayList<JProgressBar> bars = new ArrayList<JProgressBar>();
+  public void setProgressValue(int id, int val) {
+    bars.get(id).setValue(val);
+  }
 }
