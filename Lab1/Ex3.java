@@ -1,12 +1,15 @@
 public class Ex3 {
   public static void main(String[] args) {
     int[] arr = new int[10];
-    int min = Integer.MAX_VALUE;
-    int max = Integer.MIN_VALUE;
+
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = (int) ((Math.random() - 0.5) * 2 * 1000);
+    }
+
+    int min = arr[0];
+    int max = arr[0];
 
     for (int num : arr) {
-      num = (int) ((Math.random() - 0.5) * 2 * 1000);
-
       if (num < min) {
         min = num;
       }
