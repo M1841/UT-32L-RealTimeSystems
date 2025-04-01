@@ -1,4 +1,4 @@
-package Lab2.App2;
+package L02;
 
 import java.util.Observable;
 

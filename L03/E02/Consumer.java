@@ -1,4 +1,4 @@
-package Lab3.Ex02;
+package L03.E02;
 
 class Consumer extends Thread {
   Consumer(Buffer bf) {

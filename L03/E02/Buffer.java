@@ -1,4 +1,4 @@
-package Lab3.Ex02;
+package L03.E02;
 
 import java.util.ArrayList;
 

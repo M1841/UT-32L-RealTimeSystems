@@ -1,4 +1,4 @@
-package Lab3.App01;
+package L03.A01;
 
 public class Main {
   private static boolean stopThreads = false;

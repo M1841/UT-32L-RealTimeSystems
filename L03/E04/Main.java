@@ -1,4 +1,4 @@
-package Lab3.Ex04;
+package L03.E04;
 
 public class Main {
   public static void main(String args[]) throws Exception {

@@ -1,4 +1,4 @@
-public class Ex2 {
+public class E02 {
   public static void main(String[] args) {
     int[][] mat1 = new int[][] {
         new int[] { 2, 3, 1 },

@@ -1,4 +1,4 @@
-package Lab3.Ex04;
+package L03.E04;
 
 class ThreadEx extends Thread {
   ThreadEx(ThreadGroup tg, String name) {

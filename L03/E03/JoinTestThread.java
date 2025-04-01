@@ -1,4 +1,4 @@
-package Lab3.Ex03;
+package L03.E03;
 
 class JoinTestThread extends Thread {
   Thread thread;
