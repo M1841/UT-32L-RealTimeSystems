@@ -32,6 +32,6 @@ class JoinTestThread extends Thread {
         sum += i + num / i;
       }
     }
-    Main.Sum = sum;
+    Main.Sum += sum;
   }
 }
