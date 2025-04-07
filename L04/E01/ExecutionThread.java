@@ -1,10 +1,10 @@
 package L04.E01;
 
 public class ExecutionThread extends Thread {
-  Integer monitor;
+  Object monitor;
   int sleep_min, sleep_max, activity_min, activity_max;
 
-  public ExecutionThread(Integer monitor, int sleep_min, int sleep_max, int activity_min, int activity_max) {
+  public ExecutionThread(Object monitor, int sleep_min, int sleep_max, int activity_min, int activity_max) {
     this.monitor = monitor;
     this.sleep_min = sleep_min;
     this.sleep_max = sleep_max;
