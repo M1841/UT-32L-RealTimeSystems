@@ -21,7 +21,7 @@ public class A02MidThread extends Thread {
               i++;
               i--;
             }
-            Thread.sleep(this.transitionDelay);
+            Thread.sleep(this.transitionDelay * 1_000);
           } catch (Exception ex) {
             ex.printStackTrace();
           } finally {

@@ -11,7 +11,7 @@ public class A03ReceiverThread extends Thread {
   public void run() {
     System.out.println(this.getName() + " - STATE 1");
     try {
-      Thread.sleep(this.transitionDelay);
+      Thread.sleep(this.transitionDelay * 1_000);
       synchronized (this.monitor) {
         this.monitor.wait();
       }

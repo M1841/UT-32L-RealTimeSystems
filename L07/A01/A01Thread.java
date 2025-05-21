@@ -29,7 +29,7 @@ public class A01Thread extends Thread {
         if (this.semaphore2.tryAcquire()) {
           try {
             System.out.println(this.getName() + " - STATE 3");
-            Thread.sleep(this.transitionDelay);
+            Thread.sleep(this.transitionDelay * 1_000);
           } catch (Exception ex) {
             ex.printStackTrace();
           } finally {

@@ -5,11 +5,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main {
   public static void main(String[] args) {
-    while (true) {
-      CyclicBarrier barrier = new CyclicBarrier(4);
-      ReentrantLock P9 = new ReentrantLock();
-      ReentrantLock P10 = new ReentrantLock();
+    CyclicBarrier barrier = new CyclicBarrier(4);
+    ReentrantLock P9 = new ReentrantLock();
+    ReentrantLock P10 = new ReentrantLock();
 
+    while (true) {
       A02SideThread T1 = new A02SideThread(
           barrier, P9,
           new int[] { 2, 4 }, 4);
@@ -26,6 +26,7 @@ public class Main {
 
       try {
         barrier.await();
+        barrier.reset();
       } catch (Exception ex) {
         ex.printStackTrace();
       }
