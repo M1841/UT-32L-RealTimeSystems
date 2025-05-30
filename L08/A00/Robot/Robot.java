@@ -8,7 +8,7 @@ public class Robot extends Thread {
   boolean stop = false;
   public PlaceHandler PH = new PlaceHandler();
 
-  public Controller c;
+  public Controller controller;
 
   Robot_Transition_t_1 t_1;
   Robot_Transition_t_2 t_2;
@@ -21,7 +21,7 @@ public class Robot extends Thread {
     PH.AddPlace(new IntPlace("p_o", null));
     t_1 = new Robot_Transition_t_1("t_1", PH, 0);
     t_2 = new Robot_Transition_t_2("t_2", PH, 5);
-    t_2.ControllerPH = c.PH;// this transition has an output channel connected to the controller
+    t_2.ControllerPH = controller.PH;// this transition has an output channel connected to the controller
 
     while (!stop) {
       t_1.TransitionGuardsMappings();

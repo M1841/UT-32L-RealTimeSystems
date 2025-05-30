@@ -7,7 +7,7 @@ public class Controller_Transition_t_2 implements TransitionTemplate {
   Integer eet;
   Integer let;
   String Name;
-  PlaceHandlerTemplate PH;
+  PlaceHandlerTemplate PH, SupervisorPH;
 
   public Controller_Transition_t_2(String name, PlaceHandlerTemplate PH, Integer delay) {
     this.Init(name, PH);
@@ -44,7 +44,10 @@ public class Controller_Transition_t_2 implements TransitionTemplate {
       PH.GetPlaceByName("p_i2").Set(null);
       PH.GetPlaceByName("p_2").Set(null);
 
+      SupervisorPH.GetPlaceByName("ps_i2").Set(PH.GetPlaceByName("p_o1").Get());
+
       toPrint = toPrint.concat(Print() + "\n");
+      toPrint = toPrint.concat("SupervisorPH\n" + SupervisorPH.PrintAllPlaces() + "\n");
       toPrint = toPrint.concat("--------------------------------------\n");
       System.out.println(toPrint);
       return true;

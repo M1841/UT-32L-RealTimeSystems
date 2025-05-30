@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 import L08.A00.*;
 import L08.A00.Robot.*;
+import L08.A00.Supervisor.Supervisor;
 
 public class Controller extends Thread {
   boolean stop = false;
-  public Robot r;
+  public Robot robot;
+  public Supervisor supervisor;
   public PlaceHandler PH = new PlaceHandler();
 
   Controller_Transition_t_1 t_1;
@@ -24,11 +26,9 @@ public class Controller extends Thread {
 
     t_1 = new Controller_Transition_t_1("t_1", PH, 0);
     t_2 = new Controller_Transition_t_2("t_2", PH, 0);
+    t_2.SupervisorPH = this.supervisor.PH;
     t_o2 = new Controller_Transition_t_o2("t_o2", PH, 0);
-    t_o2.RobotPH = r.PH;// this transition has an output channel connected to the robot
-
-    System.out.println("Controller: Input p_i1 value");
-    this.PH.GetPlaceByName("p_i1").Set(Integer.parseInt(in.nextLine()));
+    t_o2.RobotPH = robot.PH;// this transition has an output channel connected to the robot
 
     while (!stop) {
       t_1.TransitionGuardsMappings();

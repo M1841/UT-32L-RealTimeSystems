@@ -52,11 +52,18 @@ public class Supervisor_Transition_ts_1 implements TransitionTemplate {
   @Override
   public Boolean TransitionGuardsMappings() {
     this.TransitionDelay();
-    String toPrint = "--------------Controller--------------\n";
+    String toPrint = "--------------Supervisor--------------\n";
 
-    if (!PH.GetPlaceByName("ps_i1").IsNull() && !PH.GetPlaceByName("ps_1").IsNull()) {
+    if (!PH.GetPlaceByName("ps_i1").IsNull()) {
+      PH.GetPlaceByName("ps_1").Set(PH.GetPlaceByName("ps_i1").Get());
 
+      toPrint = toPrint.concat(this.Print() + "\n");
+      toPrint = toPrint.concat("--------------------------------------\n");
+      System.out.println(toPrint);
+
+      return true;
     }
+    return false;
   }
 
   @Override

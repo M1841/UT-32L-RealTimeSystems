@@ -1,12 +1,14 @@
 package L08.A00.Supervisor;
 
+import java.util.List;
+
 import L08.A00.Interfaces.PlaceTemplate;
 
-public class Supervisor_Cl_ps_i1 implements PlaceTemplate {
-  Supervisor_Type_ps_i1 value;
+public class Supervisor_Cl_ps_1 implements PlaceTemplate {
+  List<Supervisor_Type_ps_i1> value;
   String name;
 
-  Supervisor_Cl_ps_i1(String name, Supervisor_Type_ps_i1 value) {
+  public Supervisor_Cl_ps_1(String name, List<Supervisor_Type_ps_i1> value) {
     this.Init(name, value);
   }
 
@@ -22,17 +24,17 @@ public class Supervisor_Cl_ps_i1 implements PlaceTemplate {
 
   @Override
   public Object Get() {
-    return value;
+    return this.value;
   }
 
   @Override
   public Boolean IsNull() {
-    return this.Get() == null;
+    return this.value.isEmpty();
   }
 
   @Override
   public void Set(Object value) {
-    this.value = (Supervisor_Type_ps_i1) value;
+    this.value.add((Supervisor_Type_ps_i1) value);
   }
 
   @Override
@@ -40,9 +42,10 @@ public class Supervisor_Cl_ps_i1 implements PlaceTemplate {
     return "[" + this.name + "=" + this.value + "]";
   }
 
+  @SuppressWarnings("unchecked")
   @Override
   public void Init(String name, Object value) {
     this.SetPlaceName(name);
-    this.Set(value);
+    this.value = (List<Supervisor_Type_ps_i1>) value;
   }
 }
