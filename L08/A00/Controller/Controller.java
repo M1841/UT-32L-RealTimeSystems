@@ -1,7 +1,5 @@
 package L08.A00.Controller;
 
-import java.util.Scanner;
-
 import L08.A00.*;
 import L08.A00.Robot.*;
 import L08.A00.Supervisor.Supervisor;
@@ -15,7 +13,6 @@ public class Controller extends Thread {
   Controller_Transition_t_1 t_1;
   Controller_Transition_t_2 t_2;
   Controller_Transition_t_o2 t_o2;
-  Scanner in = new Scanner(System.in);
 
   public void run() {
     PH.AddPlace(new IntPlace("p_i1", null));
