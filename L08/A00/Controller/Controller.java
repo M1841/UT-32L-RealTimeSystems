@@ -19,7 +19,7 @@ public class Controller extends Thread {
 
   public void run() {
     PH.AddPlace(new IntPlace("p_i1", null));
-    PH.AddPlace(new IntPlace("p_1", 0));
+    PH.AddPlace(new IntPlace("p_1", 1));
     PH.AddPlace(new IntPlace("p_o1", null));
     PH.AddPlace(new IntPlace("p_2", null));
     PH.AddPlace(new IntPlace("p_i2", null));

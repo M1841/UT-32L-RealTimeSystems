@@ -56,6 +56,7 @@ public class Supervisor_Transition_ts_1 implements TransitionTemplate {
 
     if (!PH.GetPlaceByName("ps_i1").IsNull()) {
       PH.GetPlaceByName("ps_1").Set(PH.GetPlaceByName("ps_i1").Get());
+      PH.GetPlaceByName("ps_i1").Set(null);
 
       toPrint = toPrint.concat(this.Print() + "\n");
       toPrint = toPrint.concat("--------------------------------------\n");

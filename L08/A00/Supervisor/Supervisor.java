@@ -24,9 +24,9 @@ public class Supervisor extends Thread {
     PH.AddPlace(new Supervisor_Cl_ps_i1("ps_i1", new Supervisor_Type_ps_i1(0, 0, 0)));
     PH.AddPlace(new Supervisor_Cl_ps_1(
         "ps_1", Collections.synchronizedList(new ArrayList<Supervisor_Type_ps_i1>())));
-    PH.AddPlace(new IntPlace("ps_i2", 0));
-    PH.AddPlace(new IntPlace("ps_o1", 0));
-    PH.AddPlace(new IntPlace("ps_o2", 0));
+    PH.AddPlace(new IntPlace("ps_i2", null));
+    PH.AddPlace(new IntPlace("ps_o1", null));
+    PH.AddPlace(new IntPlace("ps_o2", null));
     PH.AddPlace(new IntPlace("ps_2", 1));
     PH.AddPlace(new IntPlace("ps_3", 1));
 

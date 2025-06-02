@@ -15,7 +15,7 @@ public class Robot extends Thread {
 
   public void run() {
 
-    PH.AddPlace(new IntPlace("p_0", 0));
+    PH.AddPlace(new IntPlace("p_0", 1));
     PH.AddPlace(new IntPlace("p_1", null));
     PH.AddPlace(new IntPlace("p_i", null));
     PH.AddPlace(new IntPlace("p_o", null));

@@ -68,6 +68,7 @@ public class Supervisor_Transition_ts_2 implements TransitionTemplate {
       this.SetDelay((Integer) PH.GetPlaceByName("ps_3").Get());
 
       ControllerPH.GetPlaceByName("p_i1").Set(PH.GetPlaceByName("ps_o1").Get());
+      PH.GetPlaceByName("ps_2").Set(null);
 
       toPrint = toPrint.concat(this.Print() + "\n");
       toPrint = toPrint.concat("ControllerPH\n" + ControllerPH.PrintAllPlaces() + "\n");
